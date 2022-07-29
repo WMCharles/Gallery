@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
 }
 
-h1 {
+h1, h2, h4 {
     text-align: center;
     color: forestgreen;
     margin: 30px 0 50px
@@ -24,4 +24,55 @@ h1 {
 .gallery img:hover {
     filter: grayscale(0);
     transform: scale(1.1);
+}
+
+div.responsive-gallery {
+    border: 1px solid #ccc;
+}
+
+div.responsive-gallery:hover {
+    border: 1px solid #777;
+}
+
+div.responsive-gallery img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+div.responsive-gallery img:hover {
+   filter: grayscale(0);
+   transform: scale(1.05);
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    margin-bottom: 1em;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width:700px) {
+    .responsive {
+        width: 50%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .responsive {
+        width: 100%;
+    }
 }
